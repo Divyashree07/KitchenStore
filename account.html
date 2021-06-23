@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"content="with=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>KitchenStore</title>
+<meta charset="UTF-8">
+<link rel="stylesheet"href="css/account.css">
+<script type="text/javascript" src="js/account.js"></script>
+</head>
+<body>
+         <div class="container">
+
+            <div class="card">
+            <div class="inner-box"id="card">
+            <div class="card-front">
+    <h2>Login</h2>
+<form id="form"action="#">
+    <input type="email" class="input-box"placeholder="Enter Your Email Id"required id="box1" name="email" onkeyup="validate()";>
+    <span id="vali"></span>
+    <input type="password"class="input-box"placeholder=" Enter Your Password"required id="box2" name="password" onkeyup="validation()";>
+    <span id="validation"></span>
+    <button type="submit"class="btn"name="btn-login">Login</button>
+    <a href="">Forgot Password</a><br><br>
+    <h4>I'm New Here</h4><hr>
+    <button type="button"class="btn" onclick="openSignup()">Sign-Up</button>
+</form>
+</div>
+<div class="card-back">
+    <h2>Sign-Up</h2>
+    <form id="Id" action="#">
+      <input type="name"class="input-box"placeholder="Enter Your Name"required id="frist" name="name" onkeyup ="flow()";>
+        <span class="validation"></span>
+        <input type="email" class="input-box"placeholder="Enter Your Email Id" required id="second" name="email" onkeyup="menu()";>
+        <span class="validation1"></span>
+        <input type="password"class="input-box"placeholder="Enter Your Password"required id="thrid" name="password" onkeyup=" pass()";>
+        <span class="validation2"></span>
+         <input type="password"class="input-box"placeholder="Enter Your Re-Password"required id="fourth" name="repassword" onkeyup="repass()";>
+         <span class="validation3"></span>
+        <button type="submit"class="btn" name="btn-save">Sign-Up</button>
+        <a href="">Forgot Password</a><br>
+        <h4>I've an account</h4><hr>
+        <button type="button"class="btn" onclick="openLogin()">Login</button>
+    </form>
+</div>
+<script>
+    var card = document.getElementById ("card");
+    function openSignup(){
+        card.style.transform = "rotateY(-180deg)";
+    }
+    function openLogin(){
+        card.style.transform = "rotateY(0deg)";
+    }
+    function validate(){
+    const form =document.getElementById("form");
+    const email = document.getElementById("box1").value;
+const Pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+if(email.match(Pattern)){
+form.classList.add('valid')
+form.classList.remove('invalid')
+}else{
+    form.classList.add('invalid')
+    form.classList.remove('valid')
+}
+}
+function validation(){
+    const form =document.getElementById("form");
+    const password = document.getElementById("box2").value;
+const Pattern =/^[a-zA-Z0-9!@#$%^&*]{6,16}$/
+if(password.match(Pattern)){
+form.classList.add('validd')
+form.classList.remove('invalidd')
+}else{
+    form.classList.add('invalidd')
+    form.classList.remove('validd')
+}
+}
+function flow() {
+    const Id=document.getElementById('Id');
+    const name = document.getElementById("frist").value;
+    const Pattern = /^[a-zA-Z0-9!@#$%^&*]{3,16}$/
+    if(name.match(Pattern)){
+        Id.classList.add('valid')
+        Id.classList.remove('invalid')
+    }else{
+        Id.classList.add('invalid')
+        Id.classList.remove('valid')
+    }
+}
+function menu() {
+    const Id= document.getElementById('Id');
+    const mail= document.getElementById("second").value;
+    const Pattern =  /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+    if(mail.match(Pattern)){
+        Id.classList.add('validd')
+        Id.classList.remove('invalidd')
+    }else{
+        Id.classList.add('invalidd')
+        Id.classList.remove('validd')
+    }
+    
+}
+function pass() {
+    const Id= document.getElementById('Id');
+    const password= document.getElementById("thrid").value;
+    const Pattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/
+    if(password.match(Pattern)){
+        Id.classList.add('validdd')
+        Id.classList.remove('invaliddd')
+    }else{
+        Id.classList.add('invaliddd')
+        Id.classList.remove('validdd')
+    }
+    
+}
+function repass() {
+    const Id= document.getElementById('Id');
+    const repassword= document.getElementById("fourth").value;
+    const Pattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/
+    if(repassword.match(Pattern)){
+        Id.classList.add('validddd')
+        Id.classList.remove('invalidddd')
+    }else{
+        Id.classList.add('invalidddd')
+        Id.classList.remove('validddd')
+    }
+    
+}
+</script>
+</body>
+</html>  
