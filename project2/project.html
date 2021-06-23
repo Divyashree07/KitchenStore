@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="top-nav-bar">
+    <div class="search-box">
+        <i class="fa fa-bars" id="menu" onclick="openmenu()"></i>
+        <i class="fa fa-times" id="close-btn"onclick="closemenu()"></i>
+        <img src ="logo1.jpeg" alt="LOGO" class="logo">
+        <input type = text class="form-control">
+        <span class ="input-group-text"><i class="fa fa-search"></i></span>
+</div>
+<div class ="menu-bar">
+    <ul>
+        <li><a href="#"><i class="fa fa-shopping-basket"></i>Cart</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+</div>
+    </div>
+    <section class ="header">
+        <div class ="side-menu"id="side-menu">
+            <ul>
+                <li>On Sale <i class="fa fa-angle-right" ></i>
+                <ul>
+                    <li>sub-menu-1</li>
+                    <li>sub-menu-1</li>
+                    <li>sub-menu-1</li>
+                    <li>sub-menu-1</li>
+                </ul>
+                </li>
+                <li>On Sale <i class="fa fa-angle-right"></i>
+                    <ul>
+                        <li>sub-menu-2</li>
+                        <li>sub-menu-2</li>
+                        <li>sub-menu-2</li>
+                        <li>sub-menu-2</li>
+                    </ul>
+                </li>
+                <li>On Sale <i class="fa fa-angle-right"></i>
+                    <ul>
+                        <li>sub-menu-3</li>
+                        <li>sub-menu-3</li>
+                        <li>sub-menu-3</li>
+                        <li>sub-menu-3</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class ="slider">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <script>
+        function openmenu()
+        {
+            document.getElementById("side-menu").style.display="block";
+            document.getElementById("menu").style.display="none";
+            document.getElementById("close-btn").style.display="block";
+        }
+        function closemenu()
+        {
+            document.getElementById("side-menu").style.display="none";
+            document.getElementById("menu").style.display="block";
+            document.getElementById("close-btn").style.display="none";
+        }
+    </script>
+</body>
+</html>
