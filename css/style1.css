@@ -1,0 +1,151 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap');
+:root{
+    --green:green;
+}
+*{
+     font-family: 'Open Sans', sans-serif;
+     margin: 0; 
+     padding: 0;
+     box-sizing: border-box;
+     text-transform: capitalize;
+     text-decoration: none;
+     transition:all.2s cubic-bezier(.37,1.14,.26,1.24);
+}
+*::selection{
+    background:seagreen;
+    color:#fff;
+}
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+
+}
+header .header-1, header .header-2{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:1.5rem;
+    width:100%;
+    z-index:1000;
+    }
+    header .header-1 .logo{
+        font-size:2rem;
+        color:#666;
+    }
+    header .header-1 .logo i{
+        color:var(--green);
+    }
+    header .header-1 .form-container form{
+    display: flex;
+    }
+    header .header-1 .form-container form #search{
+        height:4rem;
+        width:50rem;
+        outline:none;
+        border: .2rem solid #666;
+        font-size:1.5rem;
+        padding:0 1rem;
+    }
+    header .header-1 .form-container form #search:focus{
+        border-color:var(--green);
+    }
+    header .header-1 .form-container form label{
+        height: 4rem;
+        width: 5rem;
+        text-align:center;
+        line-height: 4rem;
+        font-size: 2rem;
+        cursor: pointer;
+        background:var(--green);
+        color: #fff;
+    }
+    header .header-1 .form-container form label:hover{
+        color:greenyellow;
+    }
+.BestSeller{
+    min-height:100vh;
+}
+.heading{
+    padding-top:7rem;
+    width:95%;
+    margin:0 auto;
+    border-bottom:.2rem solid green
+
+}
+.heading span{
+    font-size:2rem;
+    padding: 1rem 6rem;
+    color:#fff;
+    background-color: green;
+    border-top-right-radius:3rem;
+    display: inline-block;
+}
+.BestSeller .box-container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    width:85%;
+    margin:0 auto;
+    cursor: pointer;
+}
+.BestSeller .box-container .box{
+    flex: 1 1  30rem;
+    border: .1rem solid rgba(0,0,0,.3);
+    overflow:hidden;
+    position:relative;
+    margin:1rem 2rem;
+}
+.BestSeller .box-container .box .img{
+    height:20rem;
+    padding:2rem;
+    text-align: center;
+    background-color: rgba(255,255,255);
+    cursor: pointer;
+
+}
+.BestSeller .box-container .box .img img{
+    height:100%;
+    object-fit: cover;
+}
+.BestSeller .box-container .box .info h3{
+padding:1rem;
+font-size: 2rem;
+color: green;
+}
+.BestSeller .box-container .box .info .subinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem;
+    border-top: .1rem solid green;
+}
+.BestSeller .box-container .box .info .subinfo .price{
+    color:rgb(235, 33, 33);
+    font-size: 2rem;
+    }
+    .BestSeller .box-container .box .info .subinfo .price span{
+        color:#666;
+        font-size: 1.5rem;
+    }
+    .BestSeller .box-container .box .info .subinfo .stars i{
+        color:orange;
+        font-size: 1.5rem;
+    }
+
+
+
+
+    @media(max-width:760px){
+        html{
+            font-size:45%;
+         }
+.BestSeller .box-container{
+        width: auto;
+    }
+
+    
+        }
